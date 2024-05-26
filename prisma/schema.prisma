@@ -12,3 +12,43 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Subscriber {
+  id              Int       @id @default(autoincrement())
+  email           String    @unique @db.VarChar(120)
+  token           String    @db.VarChar(50)
+  subscribedAt    DateTime?
+  unsubscribedAt  DateTime?
+  updatedAt       DateTime  @default(now())
+}
+
+model Newsletter {
+  id        Int       @id @default(autoincrement())
+  subject   String    @db.VarChar(200)
+  body      String
+  sentAt    DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+}
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  userId    String    @db.VarChar(200)
+  userInfo  Json
+  postId    String    @db.VarChar(100)
+  parentId  Int?
+  body      Json
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+
+  @@index([postId], name: "post_idx")
+}
+
+model Guestbook {
+  id        Int       @id @default(autoincrement())
+  userId    String    @db.VarChar(200)
+  userInfo  Json
+  message   String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+}
