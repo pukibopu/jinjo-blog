@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import QueryProvider  from "@/components/provider/QueryProvider";
 import { Suspense } from "react";
@@ -25,7 +26,7 @@ export default function BlogLayout({
                         {children}
                     </main>
                     <Suspense>
-                        
+                        <Footer />
                     </Suspense>
                 </div>
             </QueryProvider>

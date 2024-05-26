@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 
 import { RichLink } from '@/components/links/RichLink'
 import { HoverCard } from '@/components/ui/HoverCard'
-import { env } from '@/env.js'
+import { env } from '@/env.mjs'
 import { makeBlurDataURL } from '@/lib/image'
 
 type PeekabooLinkProps = LinkProps &

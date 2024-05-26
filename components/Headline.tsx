@@ -121,7 +121,7 @@ const Headline = () => {
                 />
                 <SocialLink href="/feed.xml" platform="rss" aria-label="RSS 订阅" />
                 <SocialLink
-                    href="mailto:hi@cali.so"
+                    href="mailto:jinjoyan@outlook.com"
                     aria-label="我的邮箱"
                     platform="mail"
                 />
