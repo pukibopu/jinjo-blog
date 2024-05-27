@@ -6,6 +6,8 @@ import { getSettings } from '@/sanity/queries'
 import { Photos } from '@/components/Photos'
 import { PencilSwooshIcon } from '@/assets'
 import  BlogPosts  from "@/components/blog/BlogPosts";
+import Newsletter from "@/components/Newsletter";
+import Resume from "@/components/Resume";
 const BlogHome = async () => {
   const settings = await getSettings()
   return (
@@ -23,10 +25,10 @@ const BlogHome = async () => {
             </h2>
             <BlogPosts />
           </div>
-          {/* <aside className="space-y-10 lg:sticky lg:top-8 lg:h-fit lg:pl-16 xl:pl-20">
+          <aside className="space-y-10 lg:sticky lg:top-8 lg:h-fit lg:pl-16 xl:pl-20">
             <Newsletter />
             {settings.resume && <Resume resume={settings.resume} />}
-          </aside> */}
+          </aside>
         </div>
       </Container>
     </>
