@@ -127,6 +127,8 @@ const Headline = () => {
                 />
             </motion.div>
         </div>
+
+        
     )
 }
 
