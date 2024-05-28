@@ -1,5 +1,5 @@
 {
-    "buildCommand": "pnpm turbo build",
+    "buildCommand": "npm turbo build && npx prisma generate",
     "github": {
       "silent": true
     }
