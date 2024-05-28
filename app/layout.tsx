@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import '@radix-ui/themes/styles.css';
 const inter = Inter({ subsets: ["latin"] });
-import  ThemeProvider  from "@/components/provider/ThemeProvider";
+import ThemeProvider from "@/components/provider/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "jinjo blog",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className="h-full m-0 p-0">
       <body className="flex h-full flex-col">
+        <SpeedInsights />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
